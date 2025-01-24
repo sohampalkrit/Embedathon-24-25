@@ -4,7 +4,7 @@ Team Byte Brigades's submission for IEEE Embedathon 2025. </br>
 Team members :-
 |Idx|Name|Roll No.|Contact|
 |---|---|---|---|
-| 1 | Mukul  | 231EC109   |  
+| 1 | Mukul  | 231EE134   |  mukul.231ee134@nitk.edu.in|
 | 2 | Soham | 231EE159  |   |
 | 3 | Ratan | 231EC146  | ratan.231ec146@nitk.edu.in  |
 ---
