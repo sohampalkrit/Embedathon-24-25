@@ -29,7 +29,7 @@ python -m esptool --port com11 write_flash 0x0 firmware_backup.bin
 
 ####  Using Preference Library
 
-Using this [code](final_task\milestone1\scripts\read_data\read_data.ino) we could read the value from NVS.
+
 
 ```bash
  line0: �?=18141312131254144313133
