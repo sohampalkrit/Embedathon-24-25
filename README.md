@@ -132,9 +132,10 @@ This data is sent to the ESP32 server.
 The data is received in a JSON format, and the data is reconstructed into a matrix of size 8x160 (8x8 per letter) consisting of 1s and 0s where 1s represent LED ON and 0s represent LED off.</br> We have a temporary matrix of 8x8 which iterates throught the columns of the first long matrix. At each iteration we send the output of the temp matrix to our LED matrix for display. When the temporary matrix is full of 0's, it resets back to the beginning.
 
 ### Step 4: Utilizing the LED Matrix
-1. Connect according to pin diagram; for detailed connections refer [connections](learning/led_matrix/connection.txt)
+1. Connect according to pin diagram; 
 
-![LED MATRIX diagram](final_task/photos/led_matrix_pin.jpeg)  
+![LED MATRIX diagram]![image copy](https://github.com/user-attachments/assets/dbb8e165-42bf-461e-ba61-3153b3837cc0)
+
 
 2. Using this [test all led](learning/led_matrix/test_all_led/test_all_led.ino) we could run all leds one by one 
   
@@ -148,15 +149,14 @@ To do this, we need to turn on column 2,4 and 6. We will also need to turn on ro
 
 ### Outputs
 
+https://github.com/user-attachments/assets/a5f1b01b-5be3-4cf1-89e2-d425c5ec568f
 
-https://github.com/user-attachments/assets/64e0fbd5-a0c3-468b-9900-873369a79fb2
-
-
-https://github.com/user-attachments/assets/343a28c0-091d-4ae0-9c37-55ac918fe2c2
+https://github.com/user-attachments/assets/a68d9a00-05ce-4b9f-b052-ba4f45678f21
 
 
 
 ---
+
 ## References
 
 [esp-32 idf](https://github.com/espressif/esp-idf) </br>
