@@ -23,12 +23,7 @@ python -m esptool --port com11 read_flash 0x0 0x400000 firmware_backup.bin
 python -m esptool --port com11 write_flash 0x0 firmware_backup.bin
 ```
 
-3. Reading the firmware:
-Using a hex editor like [hxd](https://mh-nexus.de/en/hxd/), we could view the whole firmware and things written to it.
 
-Here is what we found:
-
-![hex editor image output](/final_task/photos/hex_editor_output.png)
 
 ### Step 2. Converting the bin data to a usable format
 
@@ -95,7 +90,8 @@ structure of the pattern.` This meant we needed to alternate between the two sym
 #### a. ESP32
 - On the ESP we have a websocket running which takes the Key values from NVS of the ESP and converts it to readable format using the Preferences library.
 - It then sends the data to the computer which decrypts it.
-- **[This](final_task/milestone2/transmit_password_websocket/transmit_password_websocket.ino)** is the code which does this.
+- **[This](https://github.com/user-attachments/assets/a5f1b01b-5be3-4cf1-89e2-d425c5ec568f
+)** is the code which does this.
 
 #### b. Receiving PC
 - On the Receiving PC we have a python script which has 2 main functionalities.
@@ -104,7 +100,7 @@ structure of the pattern.` This meant we needed to alternate between the two sym
 - Upon performing this action, this is the output received.
 
 #### c. Running the code
-**[This](/final_task/milestone2/receive.py)** is the code which performs all this. To run this code follow the following steps:
+** To run this code follow the following steps:
 
   1. Change the ssid and password in transmit_password_websocket to the ssid and password of your network.
   2. Upload the code in transmit_password_websocket onto your ESP32.
@@ -113,10 +109,10 @@ structure of the pattern.` This meant we needed to alternate between the two sym
   5. Run `/final_task/milestone2/receive.py`
 
 #### d. Output
-![receive output](/final_task/milestone2/photos/output.png)
+![WhatsApp Image 2025-01-12 at 1 33 10 PM](https://github.com/user-attachments/assets/dc04f68a-a462-434f-ac59-07edbb866776)
 
-Click on this link for a demonstration video:
-https://github.com/user-attachments/assets/2d24559f-222d-41d2-809e-943fc90f1c7d
+
+
 
 
 ---
@@ -134,14 +130,14 @@ The data is received in a JSON format, and the data is reconstructed into a matr
 ### Step 4: Utilizing the LED Matrix
 1. Connect according to pin diagram; 
 
-![LED MATRIX diagram]![image copy](https://github.com/user-attachments/assets/dbb8e165-42bf-461e-ba61-3153b3837cc0)
+[Pin Diagram](https://github.com/user-attachments/assets/dbb8e165-42bf-461e-ba61-3153b3837cc0)
 
 
-2. Using this [test all led](learning/led_matrix/test_all_led/test_all_led.ino) we could run all leds one by one 
+2. Using this test all  we could run all leds one by one 
   
 3. Now, we discover an issue with the LED Matrix. We cannot display the whole letter at once. We can demonstrate this using an example. Let's say you wanna turn on points((1,2),(1,6),(3,4)) </br>
-To do this, we need to turn on column 2,4 and 6. We will also need to turn on row 1 and 3. However, when we do this, we turn on (1,4), (3,2) and (3,6). To prevent this we use 
-[scaninng](learning/led_matrix/display_pattern/display_pattern.ino).
+To do this, we need to turn on column 2,4 and 6. We will also need to turn on row 1 and 3. However, when we do this, we turn on (1,4), (3,2) and (3,6). To prevent this we use scanning
+
 
 4. So, we turn on necessary LED's in only one row at once. First line is turned on, and after a tiny delay of 1ms, second line is turned on and so on. This effectively appears as a whole to our eyes because of our human image retention time of 16ms. So we effectively achieve a sliding text effect on our LED matrix.
 
