@@ -5,7 +5,7 @@ Team members :-
 |Idx|Name|Roll No.|Contact|
 |---|---|---|---|
 | 1 | Mukul  | 231EE134   |  mukul.231ee134@nitk.edu.in|
-| 2 | Soham | 231EE159  |   |
+| 2 | Soham | 231EE142  |   |
 | 3 | Ratan | 231EC146  | ratan.231ec146@nitk.edu.in  |
 ---
 ## Milestone 1: How we got the values from esp32's NVS
